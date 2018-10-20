@@ -6,7 +6,7 @@ namespace Lab01AboutMeQuiz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("About Me");
+            Console.WriteLine("About-Me");
         }
     }
 }
