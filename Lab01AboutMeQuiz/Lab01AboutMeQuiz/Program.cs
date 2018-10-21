@@ -20,9 +20,15 @@ namespace Lab01AboutMeQuiz
             Question3();
             Console.WriteLine("-----------");
             BirthMonth();
-            //Question4();
-            //Console.WriteLine("-----------");
-            //Question5();
+            Console.WriteLine("I'm a motorcycle enthusiast! Please answer True or False.");
+            Question4();
+            Console.WriteLine("-----------");
+            Console.WriteLine("I enjoy cooking so much that I went to culinary school right after high school.");
+            //used another write line because of screen space
+            Console.WriteLine("Where's one of the many best places in the world that I went to experience pastry artistry?"); 
+            Question5();
+            Console.WriteLine("-----------");
+            Console.WriteLine("Thanks for getting to know a little about me");
         }
 
         //"static" method can be used in main method "void" is the return type that does not return a value
@@ -41,6 +47,7 @@ namespace Lab01AboutMeQuiz
             Console.WriteLine("You're from " + where + "!" + " Awesome!" + " I was born and raised in Seattle.");
         }
 
+        //this is a void method that is inserting a non void return type into the method. I wanted to use the following block of code to experiment a little bit write and read line 
         public static void Question3()
         {
             Console.WriteLine("What month were you born in?");
@@ -54,13 +61,62 @@ namespace Lab01AboutMeQuiz
             return Console.ReadLine();
         }
 
-        //public static int Question4()
-        //{
-        //    Console.WriteLine("How many times have I been to Ireland?");
-        //    {
+        //this is a non void method with a return type of bool for a true or false response from the program user
+        public static bool Question4()
+        {
+            
+            string userInput = Console.ReadLine().ToLower();
 
-        //    }
+            if (userInput == "true")
+            {
+                Console.WriteLine("Yes, I am! I've owned two. Unfortunately the first one got totalled.");
+                return true;
+                
+            }
+            else
+            {
+                Console.WriteLine("You answered false. The answer is true.");
+                return false;
+            }
 
-        //}
+        }
+
+        //this is a non void method with a string as a return type
+        public static string Question5()
+        {
+            string userInput = Console.ReadLine().ToLower();
+            try
+            {
+                
+                if (userInput == "paris")
+                {
+                    Console.WriteLine("Absolutely! I ate my way through Paris one pastry and awesome dish after another");
+                }
+            }
+
+            finally
+
+            {
+                
+                Console.WriteLine("You must enter a city name");
+                
+                if (userInput == "paris")
+                {
+                    Console.WriteLine("Absolutely! I ate my way through Paris one pastry and awesome dish after another");
+                }
+                else
+                {
+                    Console.WriteLine("You didn't guess correctly. I went to Paris!");
+                }
+
+
+            }
+            
+            return userInput;
+            //non void methods need a return
+        }
+
+
+
     }
 }
