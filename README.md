@@ -28,3 +28,4 @@ The throw keyword is used to actually create a new exception that is the bubbled
 >>> At least one try/catch/finally implementation</br> 
 
 ### Visual
+![aboutme](https://user-images.githubusercontent.com/39015829/47262891-5119b180-d4a9-11e8-98be-c6b8b0d6b279.jpg)
